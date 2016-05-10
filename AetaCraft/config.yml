@@ -1,0 +1,331 @@
+#the following are the lists of item IDs that are allowed 
+#to a class when you put general in one of their lists
+#Format: 1 2 3 4 5 ...
+GeneralSmeltables: 319 349 369 365 392 411 423 1 363
+GeneralCraftables: 1 2 3 4 5 6 13 14 15 16 17 19 20 21 22 23 109 24 25 26 27 28 29 30 33 34 35 41 42 43 44 45 46 47 48 49 50 53 54 55 57 58 59 60 61 63 64 65 66 67 68 69 70 71 72 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 107 108 1009 110 111 112 113 114 115 116 117 118 120 121 122 123 124 125 126 128 129 130 131 132 133 134 135 136 137 138 139 140 143 144 145 146 147 148 149 151 152 153 154 155 156 157 158 159 160 161 163 164 165 167 168 169 170 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 259 268 269 270 271 272 273 274 275 280 281 282 287 288 289 295 296 297 318 319 320 321 322 323 324 325 328 329 330 331 332 333 337 338 339 340 341 342 343 345 346 347 348 349 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 371 372 373 374 375 376 377 378 379 380 391 382 384 385 386 388 389 390 391 395 396 398 399 400 401 402 403 404 405 406 407 408 409 410 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 262 290 291 266          
+GeneralMCMMO: bukkit.command.me mcmmo.skills.unarmed mcmmo.skills.acrobatics essentials.xp -essentials.back -essentials.sethome -essentials.home -essentials.back.ondeath essentials.me essentials.help essentials.rules essentials.motd essentials.afk essentials.depth -essentials.kit -essentials.kit.tools essentials.list essentials.mail essentials.mail.send essentials.msg essentials.ping essentials.r essentials.rules essentials.seen essentials.signs.use.disposal essentials.suicide anticheat.check.autotool anticheat.check.fastbreak anticheat.check.fasteast anticheat.check.fastheal anticheat.check.fastinventory anticheat.check.fastplace banrecipe.enchantment.* EnderChestPlus.normal EnderChestPlus.use EnderChestPlus.break EnderChestPlus.place EnderChestPlus.craft -gates.create -gates.use.self -gates.modify.self -gates.destroy.self herochat.join herochat.leave herochat.info herochat.focus.channel lwc.protect lwc.shownotices localchat.global localchat.listen multiworld.minimum nocheatplus.checks.blockbreak nocheatplus.checks.blockinteract nocheatplus.checks.blockplace nocheatplus.checks.fight nocheatplus.checks.moving chairs.sit mcmmo.motd mcmmo.item.chimaerawing mcmmo.regeneration mcmmo.commands.whois mcmmo.commands.setmyspawn mcmmo.commands.myspawn mcmmo.chat.partychat mcmmo.commands.party mcmmo.commands.ptp mcmmo.ability.unarme mcmmo.commands.inspect mcmmo.commands.mcability mcmmo.commands.mchud mcmmo.commands.mcmmo.description mcmmo.commands.mcmmo.help mcmmo.commands.mcrank mcmmo.commands.mcstats mcmmo.commands.mctop mcmmo.commands.mctop.* mcmmo.commands.party.* 
+
+#The following are the Classes
+#
+#Format:
+# num:
+#  - name: The name of the class for display, and moving to it
+#  - mcmmo: A list of mcmmo skills that this class can use
+#  - canCraft: A list of items that can be crafted
+#  - canSmelt: A list of items that can be smelted
+#  - type: A list of words defining what type of class it is. Each player can have 1 of each type of class
+#  - canEnchant: A boolean whether or not this class can enchant
+#  - canAnvil: A boolean whether or not this class can use an anvil
+#  - canBrew: A boolean whether or not this class can brew potions
+#  - canBreed: A boolean whether or not this class can breed animals
+#  - canFarm: A boolean  whether or not this class can plant crops
+#  - canLogs: A boolean whether this class gets logs or planks from logs
+#  - tools: A list of items that this class can use to break things
+#  - weapons: A list of items that this class can use to attack things
+#  - armor: The highest tier armor that they can wear
+#  - description: A description of the class
+#
+#Lists are in the form: 1 2 3 4....
+#Lists of items can contain item IDs or general if you want the general list above
+#The following are words you can put in lists to autoinput sets of items
+#bsword- wood and stone swords
+#bpic- wood and stone pics
+#baxe- wood and stone axes
+#bhoe- wood and stone hoes
+#basics- all stone tools but hoe
+#bshovel- wood and stone shovels
+#all- every item ever
+#sword- all swords
+#bow- a bow
+#pic- all pics 
+#axe- all axes
+#hoe- all hoes
+#shovel- all shovels
+#shears- shears
+#fishingrod- fishing rod
+#if you want a specific item not found on this list then you must use the items ID
+#A boolean is either true or false
+#name and type are just single words
+#Please be sure to put a 0 if you don't want any blocks in a list
+#without this the plugin should not work
+NumberofClasses: 17
+Class:
+ 1:
+  - Blacksmith
+  - general mcmmo.skills.repair mcmmo.skills.smelting 
+  - general 359 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 290 291 292 293 294 283 284 285 286 279 278 277 267 268 269 270 271 272 273 274 275 276 261 259 258 257 256
+  - general 265 266 4 12 13 14 15 116 17 21 56 73 82 129 153 162
+  - Crafting
+  - false
+  - true
+  - false
+  - false
+  - false
+  - false
+  - basics
+  - basics
+  - Iron
+  - A blacksmith is charged with smelting the ores and hammering the tools, weapons, and armor needed to carve out a kingdom.
+ 2:
+  - Peasant
+  - none
+  - 0
+  - 0
+  - Crafting Combat Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - 0
+  - 0
+  - 0
+  - filthy peasants can not do a thing
+ 3:
+  - Alchemist
+  - general mcmmo.skills.alchemy 
+  - general
+  - general
+  - Crafting
+  - true
+  - true
+  - true
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Skilled in the use of potion making and enchanting, the alchemist makes brews and instills weapons with magic.
+ 4:
+  - Farmer
+  - general mcmmo.skills.herbalism mcmmo.skills.taming 
+  - general
+  - general
+  - Crafting
+  - false
+  - false
+  - false
+  - true
+  - true
+  - false
+  - basic hoe shears
+  - basic
+  - Iron
+  - Food is the base for any kingdom and a farmer provides that by harvesting crops and breeding livestock.
+ 5:
+  - Miner
+  - general mcmmo.skills.excavation mcmmo.skills.mining 
+  - general
+  - general
+  - Crafting
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic pic shovel
+  - basic
+  - Iron
+  - Providing ores for a kingdoms tools and weapons, and stone for a kingdoms walls, the miner provides the minerals needed to build a kingdom.
+ 6:
+  - Warrior
+  - general mcmmo.skills.archery mcmmo.skills.axes mcmmo.skills.swords
+  - general
+  - general
+  - Crafting Combat
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic bow axe sword
+  - Diamond
+  - Instead of taking a traditional trade, warriors practices with all weapons and heavier diamond armor to overcome their foes.
+ 7:
+  - Woodsman
+  - general mcmmo.skills.woodcutting mcmmo.skills.fishing 
+  - general
+  - general
+  - Crafting
+  - false
+  - false
+  - false
+  - false
+  - false
+  - true
+  - basic axe fishingrod
+  - basic
+  - Iron
+  - Carving an existence in the wild, a woodsman survives by fishing and provides lumber for his kingdom.
+ 8:
+  - Swordsman
+  - general mcmmo.skills.swords 
+  - general
+  - general
+  - Combat
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic sword
+  - Iron
+  - A militia man trained in the use of a sword and iron armor.
+ 9:
+  - Axeman
+  - general mcmmo.skills.axes 
+  - general
+  - general
+  - Combat
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic axe
+  - Iron
+  - A militia man trained in the use of an axe and iron armor.
+ 10:
+  - Bowman
+  - general mcmmo.skills.archery
+  - general
+  - general
+  - Combat
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic bow
+  - Iron
+  - A militia man trained in the use of a bow and iron armor.
+ 11:
+  - Mod
+  - general essentials.back essentials.back.ondeath burriedtreasure.burytreasure
+  - general
+  - general
+  - Position
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - If you are a mod and you need a description then that is just sad
+ 12:
+  - Erthis
+  - general aetacraft.erthis
+  - general
+  - general
+  - Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Erthis is the god of light and life.
+ 13:
+  - Valdor
+  - general aetacraft.valdor
+  - general
+  - general
+  - Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Valdor is the god of death and destruction.
+ 14:
+  - Armvard
+  - general aetacraft.armvard
+  - general
+  - general
+  - Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Armvard is the god of peace and order.;
+ 15:
+  - Faear
+  - general aetacraft.faear
+  - general
+  - general
+  - Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Faear is the god of fire, war and the hunt.
+ 16:
+  - Lupavio
+  - general aetacraft.lupavio
+  - general
+  - general
+  - Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Lupavio is the creator of the world we live in, the aetadomain.
+ 17:
+  - Vulcan
+  - general aetacraft.vulcan
+  - general
+  - general
+  - Religion
+  - false
+  - false
+  - false
+  - false
+  - false
+  - false
+  - basic
+  - basic
+  - Iron
+  - Vulcan is the god of the underground, mining, and lava.
+#The following is a list of players followed by the names of every class
+# they are a part of. You can touch this if you really want but it will
+#get saved by the plugin if you use ingame commands and it is better
+#to use these commands as it will check if the player is allowed to be
+#all of the inputed classes where as just writing it here wont check
+
+
