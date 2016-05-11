@@ -1,0 +1,20 @@
+Modes: Default Tian Math Learn NewMode done 
+Password: Password
+OutputMode: all
+Mode: Learn
+Default
+hi
+hi!  How are you?  
+hi!
+hi  How are'nt you?  this is a test!  this is a test!  
+this
+that  
+This is a test
+no its not!  yes it is!  
+Tian
+hi!
+hi!  I love you!<3  
+Math
+Learn
+NewMode
+done
